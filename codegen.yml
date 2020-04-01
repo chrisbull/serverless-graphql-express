@@ -18,8 +18,8 @@ generates:
     config:
       reactApolloVersion: 3
       withHooks: true
-      withHOC: true
-      withComponent: true
+      withHOC: false # no longer supported
+      withComponent: false # no longer supported
       withMutationFn: true
       withResultType: true
       enumsAsTypes: true 
