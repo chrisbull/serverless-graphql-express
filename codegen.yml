@@ -1,0 +1,29 @@
+overwrite: true
+schema: 'http://localhost:3000/dev/graphql'
+documents: 'graphql/**/*.graphql'
+generates:
+  ./generated/schema.graphql:
+    plugins:
+      - schema-ast
+    config:
+      commentDescriptions: true
+  ./generated/react.tsx:
+    plugins:
+      - add: '/* eslint-disable */'
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+      - fragment-matcher
+    config:
+      reactApolloVersion: 3
+      withHooks: true
+      withHOC: true
+      withComponent: true
+      withMutationFn: true
+      withResultType: true
+      enumsAsTypes: true 
+      skipTypename: true # don't include __typename=* !!
+      addDocBlocks: true # adds comments for VSCode helpers
+      scalars:
+        DateTime: Date
+
