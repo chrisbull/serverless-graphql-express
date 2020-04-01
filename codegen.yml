@@ -1,6 +1,6 @@
 overwrite: true
 schema: 'http://localhost:3000/dev/graphql'
-documents: 'graphql/**/*.graphql'
+# documents: 'graphql/**/*.graphql' # uncomment me when graphql/*.graphql files exist
 generates:
   ./generated/schema.graphql:
     plugins:
@@ -10,6 +10,7 @@ generates:
   ./generated/react.tsx:
     plugins:
       - add: '/* eslint-disable */'
+      - add: '/* DO NOT MODIFY - THESE ARE AUTO GENERATED */'
       - typescript
       - typescript-operations
       - typescript-react-apollo

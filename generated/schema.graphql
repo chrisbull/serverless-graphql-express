@@ -1,0 +1,10 @@
+enum CacheControlScope {
+  PUBLIC
+  PRIVATE
+}
+
+type Query {
+  hello: String
+}
+
+scalar Upload

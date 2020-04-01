@@ -16,7 +16,7 @@ module.exports = {
     'prettier/@typescript-eslint',
   ],
   parserOptions: {
-    project: path.resolve(__dirname, './tsconfig.json'),
+    project: path.resolve(__dirname, './tsconfig.tooling.json'),
     tsconfigRootDir: __dirname,
     ecmaVersion: 2020,
     sourceType: 'module',
